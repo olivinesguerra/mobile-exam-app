@@ -18,11 +18,11 @@
 
 ## Sample Application
 
-Splash Screen 
+### Splash Screen
 <img src="art/splash_screen.png" alt="phone image" width="200px" />
 
-List view 
+### List view 
 <img src="art/list_view.png" alt="phone image" width="200px" />
 
-Detailed view 
+### Detailed view 
 <img src="art/detailed_view.png" alt="phone image" width="200px" />
