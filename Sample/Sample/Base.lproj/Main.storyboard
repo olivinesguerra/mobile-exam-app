@@ -20,7 +20,23 @@
                     <view key="view" contentMode="scaleToFill" id="2s9-mm-yHx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY Splash Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oH9-pZ-9hU">
+                                <rect key="frame" x="117" y="323" width="140" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="QuP-Oa-hKI"/>
+                                    <constraint firstAttribute="height" constant="21" id="b61-cq-3ju"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oH9-pZ-9hU" firstAttribute="centerY" secondItem="2s9-mm-yHx" secondAttribute="centerY" id="Pez-Bk-e5p"/>
+                            <constraint firstItem="oH9-pZ-9hU" firstAttribute="centerX" secondItem="2s9-mm-yHx" secondAttribute="centerX" id="Xaj-3e-H4e"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xXL-mY-EvB"/>
                 </viewController>
@@ -60,12 +76,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1770.4000000000001" y="92.203898050974516"/>
+            <point key="canvasLocation" x="1521" y="81"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="umm-1B-NSA">
             <objects>
-                <viewController id="OE8-bm-Txw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewControllerID" automaticallyAdjustsScrollViewInsets="NO" id="OE8-bm-Txw" customClass="DetailViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pqa-25-QBE"/>
                         <viewControllerLayoutGuide type="bottom" id="tOa-Bh-Hrk"/>
@@ -74,8 +90,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MAk-h8-1eQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MAk-h8-1eQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -84,13 +100,16 @@
                             <constraint firstItem="tOa-Bh-Hrk" firstAttribute="top" secondItem="MAk-h8-1eQ" secondAttribute="bottom" id="4aH-YL-j1i"/>
                             <constraint firstItem="MAk-h8-1eQ" firstAttribute="width" secondItem="ORQ-dn-NVU" secondAttribute="width" id="NFo-Z3-nuC"/>
                             <constraint firstItem="MAk-h8-1eQ" firstAttribute="centerX" secondItem="ORQ-dn-NVU" secondAttribute="centerX" id="i6X-PY-hUL"/>
-                            <constraint firstItem="MAk-h8-1eQ" firstAttribute="top" secondItem="Pqa-25-QBE" secondAttribute="bottom" constant="-20" id="qUw-Kv-fPO"/>
+                            <constraint firstItem="MAk-h8-1eQ" firstAttribute="top" secondItem="Pqa-25-QBE" secondAttribute="bottom" id="qUw-Kv-fPO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentTblView" destination="MAk-h8-1eQ" id="rGO-aR-XfC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KoB-k7-bGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2452" y="91.304347826086968"/>
+            <point key="canvasLocation" x="2226" y="81"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j3a-IM-zEH">

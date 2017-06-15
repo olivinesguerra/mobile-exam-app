@@ -68,6 +68,7 @@ extension ListViewController :UITableViewDataSource , UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCellID") as! ListTableViewCell
+        cell.loadData(data: self.viewModel.itemArray[indexPath.row])
         return cell
     }
     
@@ -77,5 +78,10 @@ extension ListViewController :UITableViewDataSource , UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let nextVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "DetailViewControllerID") as! DetailViewController
+        nextVC.model = self.viewModel.itemArray[indexPath.row]
+        nextVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }

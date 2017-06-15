@@ -25,4 +25,10 @@ class ListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func loadData(data:ItemModelItemMapper){
+        self.listTitleLbl.text = data.event_name
+        self.listDateLbl.text = data.start_date
+        self.listInfoLbl.text = data.event_desc
+    }
+    
 }
