@@ -28,7 +28,7 @@ class ViewModel: NSObject {
     
     
     func login(onSuccess : @escaping (_ success : Bool) -> (),onFailed : @escaping (_ errorTitle : String,_ errorMessage : String) -> ()){
-        self.provider.request(.login(email: "meowmeowmeow123@gmail.com", password: "123123123"))
+        self.provider.request(.login(email: "meowmeow@yahoo.com", password: "1234567890"))
             .debug()
             .subscribe { event in
                 switch event {
